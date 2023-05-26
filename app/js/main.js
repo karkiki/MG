@@ -25,5 +25,13 @@ $(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true
+    });
+
+    //load more
+    $("#loadMore").on('click', function () {
+        $("#boxs .box:hidden").slice(0,4).slideDown()
+        if (($('#boxs .box:hidden')).length == 0) {
+            $("#loadMore").fadeOut('slow')
+        }
     })
 });
