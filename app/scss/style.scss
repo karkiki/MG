@@ -411,7 +411,7 @@
     transition: all 0.3s;
 
     & .sales-leaders__hidden,
-     .new-items__hidden {
+    .new-items__hidden {
       opacity: 0;
       transition: all 0.3s;
     }
@@ -464,11 +464,11 @@
     margin-bottom: 8px;
   }
 
-  &__price{
+  &__price {
     display: flex;
     justify-content: center;
 
-    &--new { 
+    &--new {
       @include f600;
       padding-right: 10px;
     }
@@ -484,7 +484,7 @@
     align-items: center;
     padding: 22px 15px 0px;
 
-    & .bottom-buy{
+    & .bottom-buy {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -497,14 +497,14 @@
       transition: all 0.3s;
       text-decoration: none;
       outline: none;
-    } 
+    }
 
     & .bottom-buy:hover {
       background-color: $peach;
     }
   }
 
-  &__text{
+  &__text {
     font-size: 14px;
     @include f600;
     margin-left: 28px;
@@ -517,18 +517,18 @@
     margin-left: 10px;
   }
 
-  &__icon::before{
+  &__icon::before {
     font-size: 20px;
     padding: 5px;
     background-color: $white;
     border-radius: 50%;
   }
 
-  &__inner:hover{
+  &__inner:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 
     & .sales-leaders__hidden,
-     .new-items__hidden {
+    .new-items__hidden {
       opacity: 1;
     }
   }
@@ -540,11 +540,11 @@
     color: darkgray;
     cursor: pointer;
     transition: color 0.3s, border 0.3s ease;
-    position: relative
+    position: relative;
   }
 
-  &__buy:before{
-    content: '';
+  &__buy:before {
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -553,16 +553,16 @@
     background-color: $underline;
   }
 
-  &__buy:hover{
+  &__buy:hover {
     color: $text;
   }
 
-  &__buy:hover::before{
+  &__buy:hover::before {
     background-color: $text;
   }
 
   &__loadMore,
-  &_newItemsloadMore{
+  &_newItemsloadMore {
     font-size: 14px;
     line-height: 1.715;
     @include f600;
@@ -579,8 +579,8 @@
   }
 
   &__loadMore::after,
-  &_newItemsloadMore::after{
-    content: '+';
+  &_newItemsloadMore::after {
+    content: "+";
     position: absolute;
     padding-left: 20px;
     font-size: 24px;
@@ -589,20 +589,19 @@
   }
 
   &__loadMore:hover,
-  &_newItemsloadMore:hover{
+  &_newItemsloadMore:hover {
     border: 1px solid $text;
   }
 }
 
 //Количество карточек до нажатия кнопки Загрузить больше
-#boxs .box:nth-child(n+5) {
+#boxs .box:nth-child(n + 5) {
   display: none;
 }
 
-#newBoxs .newBox:nth-child(n+5) {
+#newBoxs .newBox:nth-child(n + 5) {
   display: none;
 }
-
 
 @keyframes animate {
   0% {
@@ -619,22 +618,22 @@
 .collections {
   padding-bottom: 150px;
 
-  &__mainTitle{
+  &__mainTitle {
     margin-bottom: 20px;
   }
 
-  &__item{
+  &__item {
     max-width: 1760px;
     width: 100%;
     position: relative;
 
-    &-wrapper{
+    &-wrapper {
       display: flex;
       justify-content: space-between;
     }
   }
 
-  &__item-left{
+  &__item-left {
     max-width: 1160px;
     width: 100%;
 
@@ -646,7 +645,7 @@
     }
   }
 
-  &__item-right{
+  &__item-right {
     max-width: 530px;
     width: 100%;
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
@@ -659,7 +658,7 @@
       background-size: cover;
     }
 
-    &__title{
+    &__title {
       font-size: 28px;
       line-height: 1.6;
       margin-bottom: 8px;
@@ -670,7 +669,7 @@
       justify-content: flex-start;
       margin-bottom: 22px;
 
-      &--new{
+      &--new {
         @include f600;
         padding-right: 25px;
       }
@@ -707,7 +706,7 @@
           cursor: pointer;
         }
 
-        &__icon::before{
+        &__icon::before {
           content: "\f08a";
           font-size: 20px;
           padding: 5px;
@@ -740,24 +739,102 @@
   outline: none;
 }
 
-.slick-prev{
+.slick-prev {
   left: 0;
   margin-right: 22px;
 }
 
-.slick-prev::before{
+.slick-prev::before {
   content: "\f053";
   font-size: 50px;
-  font-family: 'icomoon';
+  font-family: "icomoon";
 }
-.slick-next{
+.slick-next {
   right: 0;
   margin-right: 22px;
 }
-.slick-next::before{
+.slick-next::before {
   content: "\f054";
   font-size: 50px;
-  font-family: 'icomoon';
+  font-family: "icomoon";
 }
 
 //end collections
+
+//start footer
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  flex-shrink: 0;
+  background-color: $gray;
+  padding: 100px 180px 0;
+  width: 100%;
+
+  &__inner {
+    &-title {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    padding: 0 15px;
+  }
+
+  &__item-title {
+    font-size: 20px;
+    @include f600;
+    margin-bottom: 24px;
+  }
+
+  &__item-list li {
+    margin: 16px 0;
+  }
+
+  &__item-list li a:hover {
+    color: $hovertext;
+  }
+
+  &__bottom {
+    padding: 110px 0px 50px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &-copyright {
+      font-size: 14px;
+      @include f600;
+    }
+
+    &-privacyPolicy,
+    &-termsOfUse {
+      font-size: 14px;
+      line-height: 1.715;
+      transition: color 0.3s ease;
+      color: $hovertext;
+      cursor: pointer;
+    }
+
+    &-privacyPolicy:hover,
+    &-termsOfUse:hover {
+      color: $text;
+    }
+  }
+}
+
+//ens footer
