@@ -40,5 +40,16 @@ $(function () {
         if (($('#newBoxs .newBox:hidden')).length == 0) {
             $("#newItemsloadMore").fadeOut('slow')
         }
-    })
+    });
+
+    //collection slider
+    $(".collections__inner").slick({
+        dots:false,
+        arrows:true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay:false
+
+    });
+
 });
