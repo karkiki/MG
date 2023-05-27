@@ -33,5 +33,12 @@ $(function () {
         if (($('#boxs .box:hidden')).length == 0) {
             $("#loadMore").fadeOut('slow')
         }
+    });
+
+    $("#newItemsloadMore").on('click', function () {
+        $("#newBoxs .newBox:hidden").slice(0,4).slideDown()
+        if (($('#newBoxs .newBox:hidden')).length == 0) {
+            $("#newItemsloadMore").fadeOut('slow')
+        }
     })
 });
