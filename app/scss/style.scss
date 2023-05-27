@@ -470,7 +470,7 @@
 
     &--new { 
       @include f600;
-      padding-right: 25px;
+      padding-right: 10px;
     }
 
     &--old {
@@ -614,3 +614,150 @@
 }
 
 //end sales-leaders
+
+//start collections
+.collections {
+  padding-bottom: 150px;
+
+  &__mainTitle{
+    margin-bottom: 20px;
+  }
+
+  &__item{
+    max-width: 1760px;
+    width: 100%;
+    position: relative;
+
+    &-wrapper{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item-left{
+    max-width: 1160px;
+    width: 100%;
+
+    &__img {
+      min-height: 870px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &__item-right{
+    max-width: 530px;
+    width: 100%;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+    padding: 0% 30px;
+
+    &__img img {
+      min-height: 662px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &__title{
+      font-size: 28px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    &__price {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 22px;
+
+      &--new{
+        @include f600;
+        padding-right: 25px;
+      }
+    }
+
+
+    &__bottom {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      & .button-buy {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7px 14px 7px 0px;
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+        outline: none;
+
+        &__text {
+          font-size: 14px;
+          @include f600;
+          margin-right: 10px;
+        }
+
+        &__icon {
+          border-radius: 50%;
+          position: relative;
+          margin-left: 10px;
+          cursor: pointer;
+        }
+
+        &__icon::before{
+          content: "\f08a";
+          font-size: 20px;
+          padding: 5px;
+          background-color: $white;
+          border-radius: 50%;
+          transition: all 0.3s;
+        }
+
+        &__icon:hover::before {
+          content: "\f004";
+          background-color: $peach;
+          color: $text;
+        }
+      }
+    }
+  }
+}
+
+.slick-arrow {
+  border:none;
+  width: 35px;
+  height: 52px;
+  font-size: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+}
+
+.slick-prev{
+  left: 0;
+  margin-right: 22px;
+}
+
+.slick-prev::before{
+  content: "\f053";
+  font-size: 50px;
+  font-family: 'icomoon';
+}
+.slick-next{
+  right: 0;
+  margin-right: 22px;
+}
+.slick-next::before{
+  content: "\f054";
+  font-size: 50px;
+  font-family: 'icomoon';
+}
+
+//end collections
